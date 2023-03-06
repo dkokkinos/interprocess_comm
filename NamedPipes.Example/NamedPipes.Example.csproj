@@ -1,0 +1,15 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Communication.Core\Communication.Core.csproj" />
+    <ProjectReference Include="..\NamedPipes.Client\NamedPipes.Client.csproj" />
+    <ProjectReference Include="..\NamedPipes.Core\NamedPipes.Core.csproj" />
+    <ProjectReference Include="..\NamedPipes.Server\NamedPipes.Server.csproj" />
+  </ItemGroup>
+
+</Project>
