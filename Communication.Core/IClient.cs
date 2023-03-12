@@ -6,10 +6,9 @@ using System.Threading.Tasks;
 
 namespace NamedPipes.Core
 {
-    public interface IClient : INode, IDisposable
+    public interface IClient : IPCConnection
     {
         Task Connect();
-        Task Send(string message);
         event EventHandler ConnectedToServer;
         event EventHandler ClientStarted;
     }

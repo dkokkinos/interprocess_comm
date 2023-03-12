@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace NamedPipes.Core
 {
-    public abstract class NamedPipeBase<T> : INode
+    public abstract class NamedPipeBase<T> : IPCConnection
         where T : PipeStream
     {
         protected readonly string _name;
@@ -25,7 +25,7 @@ namespace NamedPipes.Core
             Disconnected?.Invoke(this, EventArgs.Empty);
         }
 
-        public event EventHandler MessageReceived;
+        public event EventHandler<MessageReceivedEventArgs> MessageReceived;
         private void OnMessageReceived(string message)
         {
             MessageReceived?.Invoke(this, new MessageReceivedEventArgs(message));

@@ -3,10 +3,9 @@ using System.Threading.Tasks;
 
 namespace Communication.Core
 {
-    public interface IServer : INode, IDisposable
+    public interface IServer : IPCConnection
     {
         Task Start();
-        Task Send(string message);
         event EventHandler ServerStarted;
         event EventHandler ClientConnected;
     }
