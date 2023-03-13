@@ -10,12 +10,10 @@ namespace NamedPipes.Core
     public class StreamString
     {
         private PipeStream ioStream;
-        private UnicodeEncoding streamEncoding;
 
         public StreamString(PipeStream ioStream)
         {
             this.ioStream = ioStream;
-            streamEncoding = new UnicodeEncoding();
         }
 
         public async Task<string> ReadString()
